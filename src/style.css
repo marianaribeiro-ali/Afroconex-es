@@ -1,0 +1,317 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5eee5;
+    color: #30251f;
+    line-height: 1.7;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    background: linear-gradient(135deg, #291710, #704027);
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.cabecalho h1 {
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.data {
+    margin-top: 20px;
+    color: #f4d7a1;
+    font-weight: bold;
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+section h2 {
+    color: #704027;
+    margin-bottom: 15px;
+    font-size: 1.7rem;
+}
+
+section p {
+    margin-bottom: 12px;
+}
+
+
+/* DESTAQUE */
+
+.destaque {
+    background-color: #f8ead5;
+    border: 2px solid #d6b27c;
+}
+
+
+/* CARDS PRINCIPAIS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: #30251f;
+    text-decoration: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.18);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: #704027;
+    padding: 15px 15px 5px;
+}
+
+.card p {
+    padding: 0 15px 18px;
+    font-size: 0.95rem;
+}
+
+
+/* CARDS DAS SUGESTÕES */
+
+.sugestoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 22px;
+}
+
+.sugestao {
+    background-color: #faf5ef;
+    border-radius: 12px;
+    overflow: hidden;
+    border-left: 5px solid #b47a45;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.sugestao:hover {
+    transform: translateY(-3px);
+}
+
+
+/* IMAGENS DOS CARDS */
+
+.sugestao img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    background-color: #eee4d8;
+}
+
+.capa-livro {
+    object-fit: contain;
+    padding: 10px;
+}
+
+.foto-artista {
+    object-fit: cover;
+}
+
+.cartaz-filme {
+    object-fit: contain;
+    padding: 10px;
+}
+
+
+/* TEXTO DOS CARDS */
+
+.conteudo-sugestao {
+    padding: 18px;
+}
+
+.conteudo-sugestao h3 {
+    color: #704027;
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.conteudo-sugestao p {
+    margin-bottom: 8px;
+}
+
+.conteudo-sugestao a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #8b4d27;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.conteudo-sugestao a:hover {
+    text-decoration: underline;
+}
+
+
+/* LINKS */
+
+.links {
+    padding-left: 25px;
+}
+
+.links li {
+    margin-bottom: 10px;
+}
+
+.links a {
+    color: #8b4d27;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+
+/* REFLEXÃO */
+
+.reflexao {
+    background-color: #704027;
+    color: white;
+    text-align: center;
+}
+
+.reflexao h2 {
+    color: #f4d7a1;
+}
+
+.reflexao strong {
+    color: #f4d7a1;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    background-color: #291710;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 0.9rem;
+}
+
+
+/* TABLETS */
+
+@media (max-width: 768px) {
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sugestoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cabecalho h1 {
+        font-size: 2.2rem;
+    }
+
+}
+
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .cards,
+    .sugestoes {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 40px 15px;
+    }
+
+    .cabecalho h1 {
+        font-size: 1.9rem;
+    }
+
+    .subtitulo {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+}
+/* IDENTIFICAÇÃO DA ESCOLA */
+
+.identificacao-escola {
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    font-size: 0.95rem;
+    color: #f4d7a1;
+}
+
+.identificacao-escola p {
+    margin-bottom: 4px;
+}
+
+.identificacao-escola p:last-child {
+    font-size: 0.85rem;
+    color: #ffffff;
+}
